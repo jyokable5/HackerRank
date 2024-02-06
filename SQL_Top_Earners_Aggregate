@@ -1,0 +1,7 @@
+// Multiply the months and salary column as total earnings and count who has the highest total earnings and count number of people who have max
+//MS SQL Server 2019
+
+SELECT top(1) MONTHS*SALARY AS earnings, COUNT(*) as cnt
+FROM employee
+GROUP BY  MONTHS*SALARY
+ORDER BY MONTHS*SALARY DESC;
