@@ -1,0 +1,12 @@
+/* 
+Given a table occupations with 2 columns: name, occupation. Display the occupation with their work title's 1st letter in parenthesis. 
+Also display the total count of each occupation & order by the same.
+*/
+select CONCAT(name,'(',substring(occupation,1,1),')') AS op 
+FROM occupations 
+ORDER BY name;
+
+Select CONCAT('There are a total of ',count(occupation),' ',lower(occupation),'s. ') AS totals
+FROM occupations 
+GROUP BY occupation
+order by totals
