@@ -1,0 +1,6 @@
+//MS SQL Server 
+
+select ci.name
+from country as co  JOIN city as ci
+ON co.code = ci.countrycode
+where co.continent ='Africa';
