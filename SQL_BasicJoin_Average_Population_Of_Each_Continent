@@ -1,0 +1,5 @@
+// MS SQL Server
+select co.continent, round(AVG(ci.population),0) 
+FROM country as co JOIN city as ci
+ON co.code = ci.countrycode
+GROUP BY co.continent
